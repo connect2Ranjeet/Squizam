@@ -1,0 +1,95 @@
+@CHARSET "ISO-8859-1";
+
+/*Structural*/
+
+body{
+	color: black; 
+	background: #04859D; 
+	font-family: Trebuchet, Verdana, sans-serif; 
+	padding: 50px 100px; 
+	line-height: 1.2em; 
+}
+
+th, td{
+	border-width: 1px;
+	padding: 5px;
+	border-style: solid;
+	border-color: gray;
+	
+}
+
+table{
+	background-color: white; 
+}
+
+/*INDEX PAGE*/
+#index{
+	padding: 20px; 
+	text-align: center; 
+	overflow: hidden; 
+	background-image:url('../img/indexBackground.png');
+	background-repeat:repeat;
+}
+
+.indexIcon{
+	margin: 0px 50px; 
+}
+
+
+/*Nav Bar -- credit to http://www.webcredible.co.uk/user-friendly-resources/css/css-navigation-menu.shtml*/
+
+#nav-menu ul
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#nav-menu li
+{
+	float: left;
+	margin: 0 0.15em;
+}
+
+#nav-menu li a
+{
+	background: url(background.gif) #fff bottom left repeat-x;
+	height: 2em;
+	line-height: 2em;
+	float: left;
+	width: 9em;
+	display: block;
+	color: #0d2474;
+	text-decoration: none;
+	text-align: center;
+}
+
+/* Hide from IE5-Mac \*/
+#nav-menu li a
+{
+	float: none
+}
+/* End hide */
+
+#nav-menu
+{
+	width:30em
+} 
+
+/*Classes*/
+
+.highlight{
+	color: #249090;	
+}
+
+.italic{
+	font-style: italic; 
+}
+
+.roman{
+	list-style-type: upper-roman; 
+}
+
+.bulletList{
+	list-style-type: disc;
+}
