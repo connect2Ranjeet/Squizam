@@ -2,34 +2,56 @@
 
 /*Structural*/
 
+html, body {
+	margin:0;
+	padding:0;
+	height:100%;
+	width:100%; 
+}
+
+
 body{
 	color: black; 
 	background: #04859D; 
+	background-image:url('../img/indexBackground.png');
 	font-family: Trebuchet, Verdana, sans-serif; 
-	padding: 50px 100px; 
 	line-height: 1.2em; 
+	overflow-x: hidden; 
+	padding: 0em 0em; 
+	margin: 0em 0em; 
+	height: 100%;
+	width: 100%;  
 }
 
-th, td{
-	border-width: 1px;
-	padding: 5px;
-	border-style: solid;
-	border-color: gray;
+.bodyContainer{
+	min-height:100%;
+	width: 100%; 
+	position:relative; 
+}
+
+td{
+	border: none; 
+	padding: 10px; 
 	
 }
 
 table{
-	background-color: white; 
+	
 }
 
 /*INDEX PAGE*/
 #index{
-	padding: 20px; 
 	text-align: center; 
 	overflow: hidden; 
 	background-image:url('../img/indexBackground.png');
 	background-repeat:repeat;
+	padding: 1.5em 2em;
 }
+
+#squizamIndexPic{
+	clear: right; 
+}
+
 
 .indexIcon{
 	margin: 0px 50px; 
@@ -38,45 +60,211 @@ table{
 
 /*Nav Bar -- credit to http://www.webcredible.co.uk/user-friendly-resources/css/css-navigation-menu.shtml*/
 
-#nav-menu ul
+.nav-menu ul
 {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
 
-#nav-menu li
+.nav-menu li
 {
-	float: left;
-	margin: 0 0.15em;
+	float: right;
+	margin: 0 0.1em;
 }
 
-#nav-menu li a
+.nav-menu li a
 {
-	background: url(background.gif) #fff bottom left repeat-x;
+	/*background: url(background.gif) #5FBCCE bottom left repeat-x;*/
 	height: 2em;
 	line-height: 2em;
-	float: left;
-	width: 9em;
+	float: right;
+	width: 10em;
 	display: block;
-	color: #0d2474;
+	color: #FFFFFF;
 	text-decoration: none;
 	text-align: center;
 }
 
+.nav-menu li a:hover, a:active
+{
+	color: #FF92C0;
+}
+
+
 /* Hide from IE5-Mac \*/
-#nav-menu li a
+.nav-menu li a
 {
 	float: none
 }
 /* End hide */
 
-#nav-menu
+.nav-menu
 {
-	width:30em
+	width:50em
+	position: relative; 
+	right: 0px; 
 } 
 
-/*Classes*/
+/* Top RIght small nav menu */
+
+.small-nav-menu{
+	font-size: 0.9em; 
+	float: right;
+	margin: -1.4em; 
+	position: absolute; 
+	top: 1.5em; 
+	right: 4em; 
+}
+
+.small-nav-menu ul
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.small-nav-menu li
+{
+	float: right;
+	margin: 0 0.1em;
+}
+
+.small-nav-menu li a
+{
+	background: none;
+	height: 2em;
+	line-height: 2em;
+	float: left;
+	width: 8em;
+	display: block;
+	color: #FFFFFF;
+	text-decoration: none;
+	text-align: center;
+}
+
+.small-nav-menu li a:hover, a:active
+{
+	color: #FF92C0; 
+}
+
+/* Hide from IE5-Mac \*/
+.small-nav-menu li a
+{
+	float: none
+}
+/* End hide */
+
+.small-nav-menu
+{
+	width:40em
+} 
+
+/*Layout*/
+
+.topBar{
+	background-image:url('../img/barGradientBackground.png');
+	background-color: #0D1120; 
+	height: 2em; 
+	width: 100%; 
+}
+
+.bottomBarIndex{
+	background-image:url('../img/barGradientBackground.png');
+	background-color: #0D1120; 
+	height: 1.5em; 
+	width: 100%; 
+	position: absolute; 
+	bottom: 0em; 
+}
+
+.bottomBar{
+	background-color: #0D1120; 
+	height: 5em; 
+	width: 100%; 
+	position: absolute; 
+	bottom: 0px; 
+	z-index: 9; 
+}
+
+.bottomBarWhite{
+	width: 1030px; 
+	background-color: #FFFFFF; 
+	position: relative; 
+	height: 1.5em; 
+	margin: auto; 	
+	
+	-webkit-border-bottom-right-radius: 10px;
+	-khtml-border-radius-bottomright: 10px;	
+	-moz-border-radius-bottomright: 10px;
+	border-bottom-right-radius: 10px;
+	
+	-webkit-border-bottom-left-radius: 10px;
+	-khtml-border-radius-bottomleft: 10px;	
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.mainBar{	
+	background-color: #60BDCE; 
+	height: 6.5em; 
+	width: 100%; 
+	position: relative; 
+	margin: 0; 
+	
+}
+
+.waveBar{
+	background-image:url('../img/wave.png');
+	height: 1.7em; 
+	width: 100%; 
+	margin-top: -1px; 
+}
+
+.waveBarTop{
+	background-color: #206876; 
+	height: 2.3em; 
+	width: 100%; 
+}
+
+.mainBody{
+	background-color: #FFFFFF; 
+	width: 1030px; 	
+	margin: auto; 
+	padding: 0px; 
+	
+	-moz-box-shadow: 0 5px 8px 3px #888;
+	-webkit-box-shadow: 0 8px 3px 5px#888;
+	box-shadow: 0 5px 8px 3px #888;
+}
+
+.content{
+	padding: 50px; 
+	
+}
+
+.squizamLogo{
+	position: relative; 
+	vertical-align: top;
+	margin-top: -0.3em;  
+	margin-left: 1em; 
+}
+
+.squizamName{
+	position: relative;
+	vertical-align: top; 
+	margin-top: 0.6em;
+	margin-left: -0.7em;  
+	
+}
+
+.navTable{
+	margin: auto; 
+	margin-top: -20px; 
+}
+
+
+/*General Classes*/
 
 .highlight{
 	color: #249090;	
