@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Multiple Choice Quiz</title>
+</head>
+<body>
+	<h1>Multiple Choice Quiz</h1>
+	<form method=post action="MCQuizSubmit.jsp">
+	
+		What type of cell in the eye detects color? <br />
+		<input type="radio" name="q1" value="rods">Rods<br />
+		<input type="radio" name="q1" value="cones">Cones<br /><br />
+	
+		Which ONE of these animals is NOT a vertebrate? <br />
+		<select name="q2">
+			<option>Tiger
+			<option>Snail
+			<option>Whale
+			<option>Trout
+			<option>Pelican
+		</select> 
+		
+		<input type="hidden" name="quizID" id="quizID" value="000001" /><br /><br />
+		
+		<input type="submit" value="SUBMIT" />
+	</form>
+</body>
+</html>
