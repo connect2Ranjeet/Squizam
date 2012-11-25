@@ -1,16 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Short Answer Quiz Submission Page</title>
-</head>
-<body>
+<%@ include file="Header.jsp" %>
 
 <%
-	
-	String[] responses = new String[1]; //creates responses array to fit all passed parameters
+	String numSAQuestions = request.getParameter("numSAQuestions"); 
+	String[] responses = new String[Integer.parseInt(numSAQuestions)]; //creates responses array to fit all passed parameters
 	
 	//Store student's responses in array, one response per array index
 	for(int i=0; i<responses.length; i++){
@@ -23,5 +15,4 @@
 <h1>You answered: </h1>
 <p>Q1: <%= responses[0] %></p>
 
-</body>
-</html>
+<%@ include file="Footer.jsp" %>

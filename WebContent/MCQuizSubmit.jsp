@@ -1,15 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Multiple Choice Quiz Submission Page</title>
-</head>
-<body>
+<%@ include file="Header.jsp" %>
+
 <%
-	//IF STATEMENT
-	String[] responses = new String[2]; //creates responses array to fit all passed parameters
+	String numMCQuestions = request.getParameter("numMCQuestions"); 
+	String[] responses = new String[Integer.parseInt(numMCQuestions)]; //creates responses array to fit all passed parameters
 	
 	//Store student's responses in array, one response per array index
 	for(int i=0; i<responses.length; i++){
@@ -23,5 +16,4 @@
 <p>Q1: <%= responses[0] %>, Q2:  <%= responses[1] %></p>
 
 
-</body>
-</html>
+<%@ include file="Footer.jsp" %>
