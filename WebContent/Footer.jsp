@@ -38,6 +38,7 @@ function validateForm(form){
 
 }
 
+
 function isEmpty(input){
 	if(input=="" || input == null){
 		return true; 

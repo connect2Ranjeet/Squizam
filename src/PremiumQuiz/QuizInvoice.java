@@ -53,8 +53,10 @@ public class QuizInvoice {
 	 */
 	public double getInvoicePrice(){
 		double price = 0; 
-		for(QuizLineItem item : lineItems){
-			price += item.getLineItemPrice(); 
+		System.out.println("Line Items size: " + lineItems.size()); 
+		for(int i = 0; i < lineItems.size(); i++){
+			price += lineItems.get(i).getLineItemPrice(); 
+			System.out.println("Price of Invoice: " + lineItems.get(i).getLineItemPrice()); 
 		}
 		return price; 
 	}
